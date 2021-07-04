@@ -3,7 +3,11 @@ kind: Service
 metadata:
   name: flask-helloworld
   namespace: {{ .Values.namespace.name }}
+  labels:
+    app: flask-helloworld
 spec:
+  selector:
+    app: flask-helloworld
   ports:
   - port: {{ .Values.service.port }} 
     protocol:  {{ .Values.service.protocol }}

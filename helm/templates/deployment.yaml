@@ -10,7 +10,13 @@ spec:
       maxSurge: 25%
       maxUnavailable: 25%
     type: RollingUpdate
+  selector:
+    matchLabels:
+      app: scnnd-flask
   template:
+    metadata:
+      labels:
+        app: scnnd-flask
     spec:
       containers:
       - image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
