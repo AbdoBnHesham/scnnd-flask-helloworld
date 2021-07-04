@@ -1,0 +1,21 @@
+namespace: 
+  name: demo
+
+replica: 
+  count: 1
+
+image: 
+  repository: abdullahhb/scnnd-flask-helloworld
+  tag: latest
+  image pull policy: IfNotPresent
+
+resources: 
+  requests: 
+    cpu: 50m 
+    memory: 256Mi
+
+service: 
+  port: 8011
+  protocol: TCP
+  targetPort: 5000
+  type: ClusterIP

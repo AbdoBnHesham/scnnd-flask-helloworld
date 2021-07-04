@@ -1,0 +1,13 @@
+namespace: 
+  name: staging
+
+replica: 
+  count: 1
+
+image: 
+  repository: abdullahhb/scnnd-flask-helloworld
+  tag: latest
+  resources: 
+    requests: 
+      cpu: 50m 
+      memory: 128Mi

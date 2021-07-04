@@ -1,0 +1,16 @@
+namespace: 
+  name: prod
+
+replica: 
+  count: 2
+
+image: 
+  repository: abdullahhb/scnnd-flask-helloworld
+  tag: latest
+  resources: 
+    requests: 
+      cpu: 70m 
+      memory: 256Mi
+
+service: 
+  port: 80
